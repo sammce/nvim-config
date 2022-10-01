@@ -20,10 +20,15 @@ Plug 'https://github.com/ap/vim-css-color' " CSS color preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro scheme(s)
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer icons
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
-
 Plug 'https://github.com/jiangmiao/auto-pairs' " Auto closes brackets, quotes etc
+
 call plug#end()
+
+let g:NERDTreeDirArrowExpandable="+"
+let g:NERDTreeDirArrowCollapsible="-"
 
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
+
+:colorscheme onehalfdark
