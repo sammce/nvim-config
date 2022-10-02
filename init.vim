@@ -23,6 +23,7 @@ Plug 'terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'jiangmiao/auto-pairs' " Auto closes brackets, quotes etc
 Plug 'preservim/tagbar' " Auto closes brackets, quotes etc
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " CoC autocompletion, similar to VSCode
+Plug 'github/copilot.vim' " Github Copilot
 
 call plug#end()
 
@@ -39,6 +40,8 @@ set completeopt=longest,menuone
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
+" Clears the search register
+nnoremap <F9> :let @/=""<CR>
 
 nmap <F8> :TagbarToggle fj<CR>
 
@@ -95,7 +98,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window.
-nnoremap <silent> K :call ShowDocumentation()<CR>
+nnoremap <silent> <M-k> :call ShowDocumentation()<CR>
 
 function! ShowDocumentation()
 	if CocAction('hasProvider', 'hover')
