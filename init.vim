@@ -12,23 +12,29 @@
 
 call plug#begin()
 
-Plug 'https://github.com/vim-airline/vim-airline' " Status bar
-Plug 'https://github.com/preservim/nerdtree' " Tree-like file explorer
-Plug 'https://github.com/tpope/vim-surround' " Surrounding ysw)
-Plug 'https://github.com/tpope/vim-commentary' " For commenting gcc & gc
-Plug 'https://github.com/ap/vim-css-color' " CSS color preview
-Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro scheme(s)
-Plug 'https://github.com/ryanoasis/vim-devicons' " Developer icons
-Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
-Plug 'https://github.com/jiangmiao/auto-pairs' " Auto closes brackets, quotes etc
+Plug 'vim-airline/vim-airline' " Status bar
+Plug 'preservim/nerdtree' " Tree-like file explorer
+Plug 'tpope/vim-surround' " Surrounding ysw)
+Plug 'tpope/vim-commentary' " For commenting gcc & gc
+Plug 'ap/vim-css-color' " CSS color preview
+Plug 'rafi/awesome-vim-colorschemes' " Retro scheme(s)
+Plug 'ryanoasis/vim-devicons' " Developer icons
+Plug 'terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
+Plug 'jiangmiao/auto-pairs' " Auto closes brackets, quotes etc
+Plug 'preservim/tagbar' " Auto closes brackets, quotes etc
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " Auto closes brackets, quotes etc
 
 call plug#end()
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="-"
+let g:tagbar_autofocus=1
+let g:tagbar_iconchars=['+', '-']
 
 nnoremap <C-f> :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 
 :colorscheme onehalfdark
+
+nmap <F8> :TagbarToggle fj<CR>
