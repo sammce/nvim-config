@@ -7,8 +7,6 @@
 :set softtabstop=4
 :set mouse=a
 :set encoding=UTF-8
-:set wildoptions+=pum
-:set wildmode=full
 
 call plug#begin()
 
