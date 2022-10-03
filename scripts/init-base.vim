@@ -1,3 +1,4 @@
+" Nvim related settings
 :set number
 :set relativenumber
 :set autoindent
@@ -8,6 +9,7 @@
 :set mouse=a
 :set encoding=UTF-8
 
+" Install plugins
 call plug#begin()
 
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
@@ -28,5 +30,3 @@ let g:NERDTreeDirArrowCollapsible="-"
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-
-:colorscheme onehalfdark
